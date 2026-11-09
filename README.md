@@ -22,6 +22,19 @@ node render.mjs --demo
 
 У `out/` з’являться `laundry.mp4`, `pair.mp4` і `small-change.mp4`. Це три варіації синтетичного 12-секундного ролика SockLock. Відео та hooks позначено як синтетичні. Демо працює локально та не потребує API-ключів.
 
+У репозиторії також є реальний тестовий ролик із трьома українськими hooks:
+
+```bash
+node render.mjs \
+  --video examples/laundry-base.mp4 \
+  --csv examples/laundry-hooks-uk.csv \
+  --out out-laundry
+```
+
+Джерело відео, автор і посилання на ліцензію Pexels наведені в
+`examples/laundry-source.md`. Готові файли з’являться в `out-laundry/` і не
+додаються до Git, оскільки їх можна повторно згенерувати цією командою.
+
 Якщо Pillow уже встановлено в іншому Python, можна передати його шлях у `PYTHON_BIN`. CLI також розпізнає `CODEX_PRIMARY_RUNTIME_PYTHON`, якщо ця змінна вже задана.
 
 ## Власний ролик
